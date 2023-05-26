@@ -20,6 +20,10 @@ const TodoElement: FC<TodoElementProps> = ({
   const width: number = widthMap[notification];
   const checkDropdown = dropdown && notification === "status";
 
+  if (typeof element === 'number') {
+    return null
+  }
+  
   return (
     <div style={{ width }} className={styles.root}>
       {checkDropdown ? (
