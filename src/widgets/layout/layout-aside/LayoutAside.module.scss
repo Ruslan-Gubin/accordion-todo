@@ -1,0 +1,52 @@
+%square {
+  width: 20px;
+  height: 18px;
+  border: 2px solid rgba(67, 60, 79, 0.436);
+  border-radius: 3px;
+}
+
+.layout_aside {
+  padding: 54px 12px 0px 12px;
+  border-right: 1px solid #e1e1e1;
+  height: 100vh;
+  display: inline-block;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+
+  .layout_aside__options {
+    height: 56px;
+    width: 51px;
+    background: #e2e2ea;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .aside_options__square {
+      @extend %square;
+      position: relative;
+      top: 2px;
+      right: 3px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 1px;
+        @extend %square;
+        border-bottom: none;
+        border-left: none;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 4px;
+        @extend %square;
+        border-bottom: none;
+        border-left: none;
+      }
+    }
+  }
+}

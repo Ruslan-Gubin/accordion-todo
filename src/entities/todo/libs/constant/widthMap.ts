@@ -1,0 +1,15 @@
+export const widthMap = {
+  date: 99,
+  codeTodo: 75,
+  codeProject: 77,
+  todo: 171,
+  status: 113,
+  responsible: 123,
+  reassign: 134,
+  priority: 77,
+  comment: 134,
+  planTime: 82,
+  factTime: 82,
+  start: 105,
+  finish: 105,
+};

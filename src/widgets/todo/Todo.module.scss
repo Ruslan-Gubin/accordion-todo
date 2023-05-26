@@ -1,0 +1,17 @@
+.todo_wrapper {
+  padding: 0 100px 0 36px;
+  width: 100%;
+
+  @media (max-width: 1200px) {
+    padding: 0px 10px 0 10px;
+  }
+
+  .todo_title {
+    padding-top: 41px;
+    padding-left: 53px;
+    padding-bottom: 20px;
+    letter-spacing: 0.005em;
+    line-height: 29px;
+    font-size: 24px;
+  }
+}

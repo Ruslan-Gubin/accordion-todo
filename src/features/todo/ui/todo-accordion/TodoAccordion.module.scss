@@ -1,0 +1,36 @@
+.root {
+  position: relative;
+  overflow: hidden;
+  .todo_accordion {
+    display: flex;
+    align-items: center;
+    background: #e1e1fb;
+    height: 47.26px;
+    cursor: pointer;
+
+    .todo_accordion__title {
+      width: 212px;
+      letter-spacing: 0.25px;
+      font-weight: 400;
+      font-family: "Roboto";
+    }
+
+    .todo_accordion__birds {
+      margin-left: 13px;
+    }
+  }
+}
+
+.todo_accordion__active {
+  animation: rotate 0.5s ease 1;
+  rotate: (180deg);
+}
+
+@keyframes rotate {
+  0% {
+    rotate: (0deg);
+  }
+  100% {
+    rotate: (180deg);
+  }
+}

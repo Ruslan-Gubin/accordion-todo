@@ -1,0 +1,47 @@
+.todo_dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px 8px 4px;
+  border: 0.5px solid #000000;
+  border-radius: 8px;
+  width: 113px;
+  cursor: pointer;
+
+  .todo_dropdown__active {
+    animation: rotate 0.5s ease 1;
+    rotate: (180deg);
+  }
+}
+.todo_dropdown__select {
+  position: absolute;
+  top: 50px;
+  border: 0.5px solid #000000;
+  border-radius: 8px;
+  z-index: 1;
+  width: 113px;
+  background-color: rgb(242, 242, 242);
+  overflow: hidden;
+  cursor: pointer;
+  .dropdown_select_item {
+    padding: 10px 0;
+    &:hover {
+      background-color: rgb(221, 244, 197);
+    }
+  }
+  .active {
+    background-color: rgb(128, 242, 145);
+    &:hover {
+      background-color: rgb(128, 242, 145);
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    rotate: (0deg);
+  }
+  100% {
+    rotate: (180deg);
+  }
+}

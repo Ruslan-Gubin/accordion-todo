@@ -1,0 +1,14 @@
+.root {
+  display: flex;
+}
+
+.hover {
+  transition: all 0.4s ease;
+  &:hover {
+    background: #71faca;
+  }
+}
+
+.gray {
+  background: #f7f7fc;
+}

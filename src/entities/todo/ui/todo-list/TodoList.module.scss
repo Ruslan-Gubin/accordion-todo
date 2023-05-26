@@ -1,0 +1,44 @@
+.todo_list {
+  position: relative;
+}
+
+.active {
+  animation: viewsList 0.4s ease;
+}
+
+.hide {
+  animation: hideAccordion 0.4s ease-in-out;
+  height: 0;
+  left: -1500px;
+  scale: 0;
+}
+
+@keyframes viewsList {
+  0% {
+    left: -1500px;
+    scale: 0;
+  }
+  100% {
+    left: 0px;
+    scale: 1;
+  }
+}
+
+@keyframes hideAccordion {
+  0% {
+    height: 100%;
+    left: 0px;
+    scale: 1;
+  }
+
+  50% {
+    scale: 0.5;
+    height: 100px;
+  }
+
+  100% {
+    scale: 0;
+    height: 0;
+    left: 1500px;
+  }
+}
