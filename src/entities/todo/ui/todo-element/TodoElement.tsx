@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import TodoDropDown from "../../../../features/todo/ui/todo-dropdown/TodoDropDown";
 import { widthMap } from "../../libs/constant/widthMap";
 import styles from "./TodoElement.module.scss";
@@ -10,7 +10,7 @@ interface TodoElementProps {
   id?: number;
 }
 
-const TodoElement: FC<TodoElementProps> = ({
+const TodoElement: FC<TodoElementProps> = memo(({
   element,
   notification,
   dropdown,
@@ -23,7 +23,7 @@ const TodoElement: FC<TodoElementProps> = ({
   if (typeof element === 'number') {
     return null
   }
-  
+
   return (
     <div style={{ width }} className={styles.root}>
       {checkDropdown ? (
@@ -33,6 +33,6 @@ const TodoElement: FC<TodoElementProps> = ({
       )}
     </div>
   );
-};
+});
 
 export { TodoElement };
